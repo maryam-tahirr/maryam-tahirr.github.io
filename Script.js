@@ -1,3 +1,13 @@
+let docTitle = document.title;
+window.addEventListener("blur",()=> {
+    document.title= "Come back!";
+});
+
+window.addEventListener("focus",() => {
+    document.title= docTitle;
+});
+
+
 var images = ["image11.avif", "image12.avif", "image13.avif", "image7.jpg", "image4.jpg", "image5.jpg", "image6.jpg", "image9.jpg", "image10.jpg"];
 var currentIndex = 0;
 var backgroundImage = document.getElementById('backgroundImage');

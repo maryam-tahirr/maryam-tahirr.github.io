@@ -779,6 +779,16 @@ li:hover {
 }
 
 
+@media screen and (min-width:481px) and (max-width:1024px){
+    #TT span{
+        font-size: 30px;
+    }
+    details{
+        width: 60%;
+    }
+}
+
+
 
 
 /********************************   Destination  ************************** */
