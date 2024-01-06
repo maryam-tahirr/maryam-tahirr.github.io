@@ -9,11 +9,11 @@
 </head>
 <body>
     <body>
-        <nav>
+        <nav style="background-color: white;">
             <img src="Logo2.png" id="spin" alt="">
             <a class="item" href="Index.html">Home</a>
             <a class="item selected" href="Destinations.html">Destinations</a>
-            <a class="item" href="">Accomodations</a>
+            <a class="item" href="#Event">Accomodations</a>
             <a class="item" href="">Events</a>
             <button class="item" id="openButton">LogIn</button>
         </nav>
@@ -43,10 +43,6 @@
         <div class="page8">
             <h1 id="headding">&nbsp; FIND YOUR DESTINATION &nbsp;</h1>
         </div>
-        <section class="logos">
-            <img src="Logo1 1.png" class="log" alt="">
-            <img src="Logo1 2.png" class="log1" alt="">
-        </section>
         <section class="nav">
             <button class="beach" onclick="toggleArticle('beach')">
                 <img src="https://a0.muscache.com/pictures/10ce1091-c854-40f3-a2fb-defc2995bcaf.jpg" alt wclassth="24" height="24">
@@ -799,15 +795,16 @@
         </footer>
 
         <!-- ##############################  Script  ###################################### -->
+        <script src="Script.js"></script>
         <script>
-        var navBar = document.querySelector('nav');
-        window.addEventListener('scroll', function () {
-            if (window.scrollY < 680 && window.scrollY > 100) {
-                navBar.classList.add('show');
-            } else {
-                navBar.classList.remove('show');
-            }
-        });
+        // var navBar = document.querySelector('nav');
+        // window.addEventListener('scroll', function () {
+        //     if (window.scrollY < 680 && window.scrollY > 100) {
+        //         navBar.classList.add('show');
+        //     } else {
+        //         navBar.classList.remove('show');
+        //     }
+        // });
 
         document.querySelectorAll('.bi-suit-heart-fill').forEach(function(like) {
             like.addEventListener('click', function() {
