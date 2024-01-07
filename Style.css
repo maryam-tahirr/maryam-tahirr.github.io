@@ -1026,6 +1026,8 @@ footer{
 @media screen and (min-width:700px) and (max-width:1024px){
     body{
         margin: 0;
+        overflow-x: hidden;
+
     }
     #TT span{
         font-size: 25px;
@@ -1039,6 +1041,8 @@ footer{
 @media screen and (min-width:481px) and (max-width:699px){
     body{
         margin: 0;
+        overflow-x: hidden;
+
     }
     nav img{
         height: 50px;
@@ -1167,6 +1171,7 @@ footer{
     body{
         width: 100%;
         margin: 0;
+        overflow-x: hidden;
     }
     nav img{
         height: 30px;
