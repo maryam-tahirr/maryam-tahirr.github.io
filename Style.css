@@ -868,6 +868,7 @@ aside a{
     overflow-y: hidden;
     font-size: 15px;
     background-color: white;
+    border: 1px red solid;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); /* Added box-shadow for a subtle shadow effect */
 }
 
@@ -885,12 +886,13 @@ aside a{
 }
 .nav button {
     min-width: 70px; /* Adjusted min-width */
-    max-height: 50px; /* Adjusted max-height */
     margin: 8px; /* Added margin for spacing between buttons */
     background: none; /* Removed background color */
     cursor: pointer;
     opacity: 50%;
     border: none;
+    padding-bottom: 10px;
+    border: 1px yellow solid;
 }
 /* Hover Styling */
 .nav:has(button:hover) button:not(:hover), .nav:has(img:hover) img:not(:hover) {
@@ -929,7 +931,7 @@ article{
     flex-grow: 1;
     width: 270px;
     margin: 2px;
-    height: 380px;
+
     align-items: center;
     padding: 5px;
     border-radius: 10px;
@@ -969,14 +971,16 @@ article:hover{
 
 /* Styling the text inside the place's article */
 article h2{
-    margin-top: -10px;
+    margin-top: 10px;
     color: #222d44;
 }
 article p{
     color: #726f6f;
-    margin-top: -15px;
     font-weight: 45;
     font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    margin-top: 5px;
+
 }
 article button{
     background-color: transparent;
@@ -1039,6 +1043,10 @@ footer{
     }
     details{
         width: 60%;
+    }
+    article{
+        flex:30%;
+        overflow: hidden;
     }
 
 }
@@ -1347,8 +1355,12 @@ footer{
         object-fit: contain;
         padding-bottom: 10px;
         font-size: 10px;
+        
     }
     article img{
         height: 40%;
+    }
+    article p{
+        margin-bottom: 20px;
     }
 }
