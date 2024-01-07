@@ -650,7 +650,7 @@ h1{
 
 /* styling FAQ information */
 details {
-    width: 35%;
+    width: 40%;
     padding: 20px;
     height: auto;
     transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out; /* Added transition properties */
