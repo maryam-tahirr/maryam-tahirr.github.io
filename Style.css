@@ -829,7 +829,7 @@ aside a{
 
 /* Heading for DEstination Page */
 #headding{
-    font-size: 200px;
+    font-size: 150px;
     font-family: 'Bebas Neue', sans-serif;
     background-color: #ffffff;
     mix-blend-mode: screen;
@@ -851,16 +851,17 @@ aside a{
 
 /* Styling NAvigation bar for all logos which sorts the places */
 .nav {
-    height: 130px; 
+    height: 100px;
     width: 100%;
     position: sticky; /* Changed to fixed position */
-    top: 100px;
+    top: 90px;
     left: 0;
     right: 0;
     z-index: 50; 
     display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
+    font-size: 15px;
     background-color: white;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2); /* Added box-shadow for a subtle shadow effect */
 }
@@ -878,9 +879,9 @@ aside a{
     border-radius: 10px;
 }
 .nav button {
-    min-width: 80px; /* Adjusted min-width */
-    max-height: 60px; /* Adjusted max-height */
-    margin: 10px; /* Added margin for spacing between buttons */
+    min-width: 70px; /* Adjusted min-width */
+    max-height: 50px; /* Adjusted max-height */
+    margin: 8px; /* Added margin for spacing between buttons */
     background: none; /* Removed background color */
     cursor: pointer;
     opacity: 50%;
@@ -892,8 +893,8 @@ aside a{
     opacity: 30%;
 }
 .nav button img {
-    width: 40px; /* Make the image fill the button */
-    height: 40px; /* Make the image fill the button */
+    width: 35px; /* Make the image fill the button */
+    height: 35px; /* Make the image fill the button */
     object-fit: contain; /* Maintain aspect ratio and cover the entire button */
 }
 .nav button:focus{
@@ -905,13 +906,13 @@ aside a{
 main{
     width: 100%;
     background-color: #cfcdf7;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }
 
 /* Putting Margin between navigation bar and places articles  */
 .roww:nth-child(1){
     margin-top: -20px;
-    padding-top: 100px;
+    padding-top: 120px;
 }
 .roww{
     display: flex;
@@ -921,9 +922,9 @@ main{
 /* Styling Each place */
 article{
     flex-grow: 1;
-    width: 280px;
-    margin: 3px;
-    height: 400px;
+    width: 270px;
+    margin: 2px;
+    height: 380px;
     align-items: center;
     padding: 5px;
     border-radius: 10px;
@@ -949,8 +950,8 @@ article:hover{
 /* Styling the heart button */
 .bi-suit-heart-fill{
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: 10px;
+    right: 10px;
     z-index: 2;
     cursor: pointer;
 }
@@ -969,13 +970,14 @@ article h2{
 article p{
     color: #726f6f;
     margin-top: -15px;
-    font-weight: 50;
+    font-weight: 45;
     font-family: Arial, Helvetica, sans-serif;
 }
 article button{
     background-color: transparent;
     border: none;
 }
+
 
 /* Styling the article which shows there's more places upcoming */
 #more{
@@ -1023,7 +1025,7 @@ footer{
 /* Media Query 2 for tablet or laptop*/
 @media screen and (min-width:700px) and (max-width:1024px){
     #TT span{
-        font-size: 30px;
+        font-size: 25px;
     }
     details{
         width: 60%;
