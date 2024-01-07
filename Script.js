@@ -23,7 +23,7 @@ function changeBackground() {
     currentIndex = (currentIndex + 1) % images.length;
 }
 
-setInterval(changeBackground, 2000);
+setInterval(changeBackground, 1000);
 
 window.addEventListener('scroll', function () {
     if (window.scrollY > 600) {
@@ -41,6 +41,14 @@ window.addEventListener('scroll', function () {
     if (isVisible) {
         document.getElementById('Tourist').style.fontSize = '8em';
     }
+    if (window.innerWidth <= 699) {
+        document.getElementById('Tourist').style.fontSize = '4em';
+        if (window.scrollY > 100) {
+            navBar.classList.add('show');
+        } else {
+            navBar.classList.remove('show');
+        }
+    }    
 });
 
 
@@ -69,7 +77,7 @@ function handleIntersection(entries, observer) {
 document.querySelectorAll('.slide-in').forEach(slideInDiv => {
     var observer = new IntersectionObserver(handleIntersection, {
         root: null, // Use the viewport as the root
-        threshold: 0.5 // Trigger when 50% of the element is visible
+        threshold: 0.1 // Trigger when 50% of the element is visible
     });
 
     observer.observe(slideInDiv);
@@ -206,6 +214,39 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const menu = document.getElementById('menu');
+    const menuoverlay = document.getElementById('menuoverlay');
+
+    menu.addEventListener('click', function (event) {
+        event.stopPropagation();
+        menuoverlay.style.display = 'flex';
+        sessionStorage.setItem('menuClicked', 'true');
+    });
+
+    document.addEventListener('click', function (event) {
+        const isClickInsideMenu = menu.contains(event.target);
+        const isClickInsideOverlay = menuoverlay.contains(event.target);
+
+        if (!isClickInsideMenu && !isClickInsideOverlay) {
+            menuoverlay.style.display = 'none';
+            sessionStorage.removeItem('menuClicked');
+        }
+    });
+
+    window.addEventListener('beforeunload', function () {
+        sessionStorage.removeItem('menuClicked');
+    });
+
+    menuoverlay.addEventListener('click', function (event) {
+        event.stopPropagation();
+    });
+
+    // Check sessionStorage to hide overlay if menu was not clicked
+    if (!sessionStorage.getItem('menuClicked')) {
+        menuoverlay.style.display = 'none';
+    }
+});
 
 
 //Img Crousel
@@ -267,3 +308,4 @@ detailsElements.forEach(details => {
         }
     });
 });
+
