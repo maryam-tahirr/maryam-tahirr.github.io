@@ -1024,6 +1024,9 @@ footer{
 
 /* Media Query 2 for tablet or laptop*/
 @media screen and (min-width:700px) and (max-width:1024px){
+    body{
+        margin: 0;
+    }
     #TT span{
         font-size: 25px;
     }
@@ -1034,6 +1037,9 @@ footer{
 }
 
 @media screen and (min-width:481px) and (max-width:699px){
+    body{
+        margin: 0;
+    }
     nav img{
         height: 50px;
         width: auto;
@@ -1160,6 +1166,7 @@ footer{
 @media screen and (max-width:480px){
     body{
         width: 100%;
+        margin: 0;
     }
     nav img{
         height: 30px;
