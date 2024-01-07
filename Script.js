@@ -39,10 +39,10 @@ window.addEventListener('scroll', function () {
 
     // If .page2 is in the viewport, increase the font size of #Tourist to 14
     if (isVisible) {
-        document.getElementById('Tourist').style.fontSize = '8em';
+        document.getElementById('Tourist').style.fontSize = '6em';
     }
     if (window.innerWidth <= 699) {
-        document.getElementById('Tourist').style.fontSize = '4em';
+        document.getElementById('Tourist').style.fontSize = '2em';
         if (window.scrollY > 100) {
             navBar.classList.add('show');
         } else {
