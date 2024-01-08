@@ -564,7 +564,7 @@ figcaption{
 .page6{
     height: auto;
     width: 100%;
-    background-color: #205072;
+    background-color: #329d9c;
 }
 h1{
     text-align: center;
@@ -577,6 +577,7 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
 }
 
 /* Styling the container for carousel images */
