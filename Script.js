@@ -144,61 +144,74 @@ window.addEventListener('scroll', function () {
 
 
 //Importing API For Wheather Casting
-document.addEventListener('DOMContentLoaded', function () {
-const apiKey = 'MXGRWEWL9AH3YX33VDP4ED9DN'; // Replace with your Visual Crossing Weather API key
-const cities = [
-    'Sharjah',
-    'Dubai',
-    'Abu Dhabi',
-    'Ras Al Khaimah',
-    'Al Ain',
-    'Ajman',
-    'Umm Al Quwain'
-];
+document.addEventListener('DOMContentLoaded', async function () {
+    const apiKey = 'MXGRWEWL9AH3YX33VDP4ED9DN'; // Replace with your Visual Crossing Weather API key
+    const cities = [
+        'Sharjah',
+        'Dubai',
+        'Abu Dhabi',
+        'Ras Al Khaimah',
+        'Al Ain',
+        'Ajman',
+        'Umm Al Quwain'
+    ];
 
-// Function to fetch weather data for a given city
-function fetchWeatherData(city) {
-    const apiUrl = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${encodeURIComponent(city)}?unitGroup=us&key=${apiKey}&contentType=json`;
-
-    return fetch(apiUrl)
-        .then(response => response.json())
-        .catch(error => {
+    // Function to fetch weather data for a given city
+    async function fetchWeatherData(city) {
+        const apiUrl = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${encodeURIComponent(city)}?unitGroup=us&key=${apiKey}&contentType=json`;
+                        // https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/sharjah?unitGroup=us&key=MXGRWEWL9AH3YX33VDP4ED9DN&contentType=json
+        try {
+            const response = await fetch(apiUrl);
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('Error fetching weather data:', error);
             return null;
-        });
-}
+        }
+    }
 
-// Function to display weather information
-function displayWeather(weatherData) {
+    const wheathervar = document.getElementById('we');
     const weatherInfoContainer = document.getElementById('weather-info');
 
-    if (weatherData && weatherData.days && weatherData.days.length > 0) {
-        const currentWeather = weatherData.days[0].conditions;
-        const temperature = weatherData.days[0].temp;
+    // Function to display weather information
+    function displayWeather(weatherData) {
+        const weatherInfoContainer = document.getElementById('weather-info');
+        const wheathervar = document.getElementById('we');
 
-        const weatherHtml = `
-            <p><strong>Current Weather:</strong> ${currentWeather}</p>
-            <p><strong>Temperature:</strong> ${temperature} °C</p>
-        `;
+        if (weatherData && weatherData.days && weatherData.days.length > 0) {
+            const currentWeather = weatherData.days[0].conditions;
+            const temperature = weatherData.days[0].temp;
 
-        const cityDiv = document.createElement('div');
-        cityDiv.classList.add('city');
-        cityDiv.innerHTML = `<h2>${weatherData.resolvedAddress}</h2>${weatherHtml}`;
-        weatherInfoContainer.appendChild(cityDiv);
-    } else {
-        const cityDiv = document.createElement('div');
-        cityDiv.classList.add('city');
-        cityDiv.innerHTML = `<h2>${weatherData.resolvedAddress}</h2><p>Weather data not available</p>`;
-        weatherInfoContainer.appendChild(cityDiv);
+            const weatherHtml = `
+                <p><strong>Current Weather:</strong> ${currentWeather}</p>
+                <p><strong>Temperature:</strong> ${temperature} °C</p>
+            `;
+
+            const cityDiv = document.createElement('div');
+            cityDiv.classList.add('city');
+            cityDiv.innerHTML = `<h2>${weatherData.resolvedAddress}</h2>${weatherHtml}`;
+            weatherInfoContainer.appendChild(cityDiv);
+
+            // If data is available, show the weather section
+            wheathervar.style.display = 'block';
+        } else {
+            // If data is not available, hide the weather section
+            wheathervar.style.display = 'none';
+
+            const cityDiv = document.createElement('div');
+            cityDiv.classList.add('city');
+            cityDiv.innerHTML = `<h2>${weatherData ? weatherData.resolvedAddress : 'Unknown Location'}</h2><p>Weather data not available</p>`;
+            weatherInfoContainer.appendChild(cityDiv);
+        }
     }
-}
 
-// Loop through cities and fetch/display weather data
-cities.forEach(city => {
-    fetchWeatherData(city).then(data => {
+    // Loop through cities and fetch/display weather data
+    for (const city of cities) {
+        const data = await fetchWeatherData(city);
         displayWeather(data);
-    });
+    }
 });
-});
+
 
 
 
