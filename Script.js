@@ -7,6 +7,14 @@ window.addEventListener("focus",() => {
     document.title= docTitle;
 });
 
+window.addEventListener('scroll', function() {
+    var totalHeight = document.body.scrollHeight - window.innerHeight;
+    var scrollPercentage = (window.scrollY / totalHeight) * 100;
+    var underline = document.getElementById('underline');
+    
+    underline.style.width = scrollPercentage + '%';
+});
+
 
 var images = ["image11.avif", "image12.avif", "image13.avif", "image7.jpg", "image4.jpg", "image5.jpg", "image6.jpg", "image9.jpg", "image10.jpg"];
 var currentIndex = 0;
