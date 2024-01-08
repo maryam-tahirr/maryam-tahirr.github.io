@@ -308,3 +308,24 @@ detailsElements.forEach(details => {
     });
 });
 
+
+
+//Back to the top button
+document.addEventListener('DOMContentLoaded', function () {
+    var button = document.getElementById('backToTopBtn');
+
+    // Show or hide the button based on scroll position
+    window.onscroll = function () {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            button.style.display = 'block';
+        } else {
+            button.style.display = 'none';
+        }
+    };
+
+    // Scroll to the top when the button is clicked
+    button.onclick = function () {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    };
+});
