@@ -49,14 +49,6 @@ p, .card a{
     font-family: 'Comfortaa', sans-serif;
 }
 
-/* Styling for the Top Header */
-#Top-Header {
-    position: relative;
-    width: 100%;
-    height: auto;
-    overflow: hidden; 
-}
-
 /* Animation for spinning effect */
 #spin{
     animation: flip 5s infinite;
@@ -76,6 +68,14 @@ p, .card a{
 img{
     width: 100%;
     height: auto;
+}
+
+/* Styling for the Top Header */
+#Top-Header {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden; 
 }
 
 /* Styling for the Top Header Logo */
@@ -1053,6 +1053,22 @@ footer{
     body{
         margin: 0;
     }
+    /* Styling for the Top Header */
+    #Top-Header {
+        width: auto;
+        height: 650px;
+    }
+    #backgroundImage{
+        width: auto;
+        height: 650px;
+    }
+    /* Styling for the Top Header Logo */
+    #Top-Header #logo {
+        height: 70%;
+        width: fit-content;
+        margin-left: 0;
+        margin-right: 0;
+    }
     nav img{
         height: 50px;
         width: auto;
@@ -1180,6 +1196,23 @@ footer{
     body{
         width: 100%;
         margin: 0;
+    }
+    /* Styling for the Top Header */
+    #Top-Header {
+        width: auto;
+        height: 500px;
+    }
+    #backgroundImage{
+        width: auto;
+        height: 500px;
+    }
+    /* Styling for the Top Header Logo */
+    #Top-Header #logo {
+        height: 50%;
+        width: fit-content;
+        margin-left: 0;
+        margin-right: 0;
+        
     }
     nav img{
         height: 30px;
