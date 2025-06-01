@@ -6,7 +6,7 @@
   <title>Projects | Maryam Tahir</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="style.css"> -->
   <style>
     :root {
       --primary: #3b82f6;
@@ -431,31 +431,162 @@
       animation: fadeInUp 0.6s ease-out forwards;
     }
     
-    /* Responsive */
-    @media (min-width: 768px) {
-      .desktop-nav {
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-      }
-      
-      .mobile-menu-btn {
-        display: none;
-      }
-      
-      .projects-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-    
-    @media (min-width: 1024px) {
-      .projects-grid {
-        grid-template-columns: 1fr 1fr 1fr;
-      }
-      .hidden {
-  display: none !important;
+/* Responsive */
+
+/* Extra small devices (phones ≤ 480px) */
+@media (max-width: 480px) {
+  main {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .max-w-6xl {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .text-4xl {
+    font-size: 0.875rem;
+    line-height: 2rem;
+  }
+  .search-filter-bar {
+    padding: 0.75rem;
+  }
+  .filter-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .filter-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .project-name {
+    font-size: 1rem;
+  }
+  .project-description {
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+  .project-details {
+    padding: 1rem;
+  }
 }
+  @media (min-width: 481px) and (max-width: 767px) {
+    main {
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
+    .max-w-6xl {
+      margin-left: 32px;
+      margin-right: 32px;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    .text-4xl {
+      font-size: 1.5rem;
+      line-height: 2.25rem;
+    }
+    .search-filter-bar {
+      padding: 1rem;
+    }
+    .filter-buttons {
+      flex-direction: row;
+      gap: 0.5rem;
+    }
+    .filter-btn {
+      width: auto;
+      justify-content: flex-start;
+    }
+    .project-name {
+      font-size: 1.125rem;
+    }
+    .project-description {
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+    }
+    .project-details {
+      padding: 1.25rem;
+    }
+  }
+
+  /* Medium devices (≥ 768px) */
+@media (min-width: 768px) {
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  main{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .mobile-menu-btn {
+    display: none;
+  }
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .search-filter-bar {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* Large devices (≥ 1024px) */
+@media (min-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .max-w-6xl {
+    padding: 0 2rem;
+  }
+  .hidden {
+    display: none !important;
+  }
+}
+
+/* Extra large devices (≥ 1280px) */
+@media (min-width: 1280px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+/* Ultra-wide devices (≥ 1536px) */
+@media (min-width: 1536px) {
+  .max-w-6xl {
+    max-width: 90rem;
+  }
+  .text-4xl {
+    font-size: 2.5rem;
+  }
+  .project-name {
+    font-size: 1.5rem;
+  }
+  .project-description {
+    font-size: 1rem;
+  }
+}
+    .mobile-menu {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+      background-color: white;
+      z-index: 100;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      min-height: 100vh;
+    }
+
+
+  
   </style>
 </head>
 <body>

@@ -9,108 +9,160 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <style>
-    .body{
-      font-family: 'Playfair Display', sans-serif;
-      background-color: var(--background);
-      font-size: 1.15rem;
+.body {
+  font-family: 'Playfair Display', sans-serif;
+  background-color: var(--background);
+  font-size: 1.15rem;
+}
 
-    }
-      .contact-container {
-      max-width: 72rem;
-      margin: 0 auto;
-    }
-    
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-    }
-    
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-    }
-    
-    .form-group {
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .form-label {
-      font-size: 0.875rem;
-      font-weight: 500;
-      margin-bottom: 0.5rem;
-    }
-    
-    .form-input {
-      padding: 0.75rem;
-      border-radius: 0.5rem;
-      border: 1px solid var(--neutral-light);
-      transition: all 0.2s;
-    }
-    
-    .form-input:focus {
-      outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
-    }
-    
-    .form-textarea {
-      min-height: 9rem;
-      resize: vertical;
-    }
-    
-    .contact-info {
-      background-color: var(--soft-gray);
-      padding: 1.5rem;
-      border-radius: 0.75rem;
-    }
-    
-    .info-item {
-      margin-bottom: 1rem;
-    }
-    
-    .info-item:last-child {
-      margin-bottom: 0;
-    }
-    
-    .info-label {
-      font-weight: 500;
-    }
-    
-    .social-links {
-      display: flex;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-    
-    .social-link {
-      padding: 0.5rem;
-      border-radius: 50%;
-      background-color: white;
-      transition: all 0.2s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .social-link:hover {
-      background-color: var(--soft-pink);
-    }
-    
-    @media (min-width: 768px) {
-      .contact-grid {
-        grid-template-columns: 2fr 1fr;
-      }
-    }
-    main{
-      padding-top: 100px;
-    }
-    .body,.text-4xl,main,div,button{
-      font-family: 'Playfair Display', sans-serif;
-      background-color: var(--background);
-    }
+main {
+  padding-top: 100px;
+}
+
+.body, .text-4xl, main, div, button {
+  font-family: 'Playfair Display', sans-serif;
+  background-color: var(--background);
+}
+
+.contact-container {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.form-input {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--neutral-light);
+  transition: all 0.2s;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.form-textarea {
+  min-height: 9rem;
+  resize: vertical;
+}
+
+.contact-info {
+  background-color: var(--soft-gray);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+.info-item {
+  margin-bottom: 1rem;
+}
+
+.info-item:last-child {
+  margin-bottom: 0;
+}
+
+.info-label {
+  font-weight: 500;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: white;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-link:hover {
+  background-color: var(--soft-pink);
+}
+
+/* Medium devices (≥768px) */
+@media (min-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .contact-container {
+    padding: 2rem;
+  }
+}
+
+/* Large devices (≥1025px) */
+@media (min-width: 1025px) {
+  .contact-container {
+    padding: 3rem;
+  }
+
+  .form-label {
+    font-size: 1rem;
+  }
+
+  .form-input {
+    font-size: 1rem;
+  }
+}
+
+/* Small devices (≤640px) */
+@media (max-width: 640px) {
+  .contact-container {
+    padding: 1rem;
+  }
+
+  .contact-form {
+    gap: 1rem;
+  }
+
+  .form-label {
+    font-size: 0.8rem;
+  }
+
+  .form-input {
+    font-size: 0.9rem;
+  }
+
+  .form-textarea {
+    min-height: 6rem;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
+
   </style>
 </head>
 <body>
