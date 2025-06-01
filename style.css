@@ -532,7 +532,6 @@
       color: var(--muted-foreground);
       display: -webkit-box;
       -webkit-line-clamp: 2;
-      line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
     }
@@ -553,7 +552,7 @@
     }
     
     .footer-container {
-      max-width: 95%;
+      max-width: 72rem;
       margin: 0 auto;
     }
     
@@ -691,5 +690,3 @@
         font-size: 4.5rem;
       }
     }
-
-    
