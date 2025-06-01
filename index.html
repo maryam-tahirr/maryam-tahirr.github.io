@@ -1,139 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maryam Tahir</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="logo.png">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maryam Tahir | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <a href="index.html" class="open">Home</a>
-                <a href="about.html">About</a>
-                <a href="portfolio.html">Projects</a>
-                <a href="https://www.linkedin.com/in/maryam-tahir-698a6224b/details/certifications/" target="_blank">Certificates</a>
-                <a href="contact.html">Contact</a>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="page1">
-            <img class="me" src="me.png" alt="">
-            <div>
-                <h1>
-                    Hey there, I am <span>Maryam Tahir</span>
-                </h1>
-                <p><span>Web Developer</span>. <span>Creative Coder</span>. <span>Innovative Designer</span>. Passionate about crafting visually appealing and highly functional websites. Always eager to embrace new challenges and opportunities for growth in the tech world.</p>
-
-            </div>
-        </section>
-        <div class="socials">
-            <div id="line"></div>
-            <a href="#"><svg fill="#fff" width="35px" height="35px" viewBox="0 0 26 29" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                <title>linkedin</title>
-                <path d="M0 8.219v15.563c0 1.469 1.156 2.625 2.625 2.625h15.563c0.719 0 1.406-0.344 1.844-0.781 0.469-0.469 0.781-1.063 0.781-1.844v-15.563c0-1.469-1.156-2.625-2.625-2.625h-15.563c-0.781 0-1.375 0.313-1.844 0.781-0.438 0.438-0.781 1.125-0.781 1.844zM2.813 10.281c0-1 0.813-1.875 1.813-1.875 1.031 0 1.875 0.875 1.875 1.875 0 1.031-0.844 1.844-1.875 1.844-1 0-1.813-0.813-1.813-1.844zM7.844 23.125v-9.531c0-0.219 0.219-0.406 0.375-0.406h2.656c0.375 0 0.375 0.438 0.375 0.719 0.75-0.75 1.719-0.938 2.719-0.938 2.438 0 4 1.156 4 3.719v6.438c0 0.219-0.188 0.406-0.375 0.406h-2.75c-0.219 0-0.375-0.219-0.375-0.406v-5.813c0-0.969-0.281-1.5-1.375-1.5-1.375 0-1.719 0.906-1.719 2.125v5.188c0 0.219-0.219 0.406-0.438 0.406h-2.719c-0.156 0-0.375-0.219-0.375-0.406zM2.875 23.125v-9.531c0-0.219 0.219-0.406 0.375-0.406h2.719c0.25 0 0.406 0.156 0.406 0.406v9.531c0 0.219-0.188 0.406-0.406 0.406h-2.719c-0.188 0-0.375-0.219-0.375-0.406z"></path>
-            </svg></a>
-            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="#fff" class="bi bi-twitter-x" viewBox="0 0 15 15">
-                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
-            </svg></a>
-        </div>
-    </main>
-    <div class="about">
-        <h1>About Me</h1>
-        <p>
-            Hello! I'm Maryam Tahir, a Creative Computing Student, passionate about blending coding, design, and problem-solving to create impactful and user-friendly digital experiences. With hands-on experience in Python, web development, and creative projects, I thrive on turning ideas into reality. I’m always eager to explore new tools, learn cutting-edge technologies, and grow as a developer. Whether it’s building websites, experimenting with AI and machine learning, or enhancing cybersecurity knowledge, I’m driven to innovate and make a difference in the tech world.
-        </p>
-        <p>
-            I am currently pursuing my degree in Creative Computing at Bath Spa University, where I have honed my skills in various programming languages and development frameworks. My journey into technology began fueled by a curiosity for how things work and a desire to create.
-        </p>
-        <p>
-            Outside of academics, I enjoy exploring new design tools, contributing to open-source projects, and staying updated with the latest trends in technology. My goal is to leverage my skills and knowledge to develop innovative solutions that can make a positive impact on society.
-        </p>
-<br><br><br>
-        
+  <!-- Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">Maryam Tahir</a>
+      
+      <button class="mobile-menu-btn" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link gradient-text active">Home</a>
+        <a href="Projects.html" class="nav-link">Projects</a>
+        <a href="About.html" class="nav-link">About</a>
+        <a href="Resume.html" class="nav-link">Resume</a>
+        <a href="Contact.html" class="nav-link">Contact</a>
+      </nav>
     </div>
-    <div class="page2">
-        <section class="skills">
-            <h1>My Skills</h1>
-            <div class="skill">
-                <div class="html">
-                    <img src="html-icon-3d-rendering-illustration-vector.png" alt="HTML">
-                    <p>HTML</p>
-                </div>
-                <div class="css">
-                    <img src="CSS-Logo.png" alt="CSS">
-                    <p>CSS</p>
-                </div>
-                <div class="js">
-                    <img src="javascript.png" alt="JS">
-                    <p>JavaScript</p>
-                </div>
-                <div class="cpp">
-                    <img src="ISO_C++_Logo.svg.png" alt="">
-                    <p>C++</p>
-                </div>
-                <div class="videog">
-                    <img src="videog.png" alt="VideoGraphy">
-                    <p>Videography</p>
-                </div>
-                <div class="photog">
-                    <img src="photo.png" alt="Photography">
-                    <p>Photography</p>
-                </div>
-                <div>
-                    <img src="design.png" alt="Designing">
-                    <p>Designing</p>
-                </div>
-                <div>
-                    <img src="figma.png" alt="Figma">
-                    <p>Figma</p>
-                </div>
-                <div>
-                    <img src="photopea.png" alt="Photopea">
-                    <p>Photopea</p>
-                </div>
-                <div>
-                    <img src="capcut.png" alt="Capcut">
-                    <p>Capcut</p>
-                </div>
-                <div>
-                    <img src="Microsoft_Office_logo_.png" alt="Microsoft Office">
-                    <p>Microsoft Office</p>
-                </div>
-                <div>
-                    <img src="Android_Studio_icon_(2023).svg.png" alt="Microsoft Office">
-                    <p>Android Studio</p>
-                </div>
-                <div>
-                    <img src="canva.png" alt="Microsoft Office">
-                    <p>Canva</p>
-                </div>
-                <div>
-                    <img src="unity.png" alt="Microsoft Office">
-                    <p>Unity</p>
-                </div>
-                <div>
-                    <img src="kaggle.png" alt="Microsoft Office">
-                    <p>Kaggle</p>
-                </div>
-                <div>
-                    <img src="flourish.png" alt="Microsoft Office">
-                    <p>Flourish</p>
-                </div>
-                <div>
-                    <img src="dialogflow.png" alt="Microsoft Office">
-                    <p>Dialogflow</p>
-                </div>
+    
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html" class="nav-link text-xl active">Home</a>
+      <a href="Projects.html" class="nav-link text-xl">Projects</a>
+      <a href="About.html" class="nav-link text-xl">About</a>
+      <a href="Resume.html" class="nav-link text-xl">Resume</a>
+      <a href="Contact.html" class="nav-link text-xl">Contact</a>
+    </div>
+  </header>
+  
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h2 class="hero-subtitle">Hello there, I'm</h2>
+        
+        <div class="typewriter">
+          <h1 class="hero-title font-serif">Maryam Tahir</h1>
+        </div>
+        
+        <p class="hero-description">
+          A <span class="fancy-underline font-medium">computing student</span> building creative, smart, and human-centered tech.
+        </p>
+        
+        <p class="text-muted-foreground" style="opacity: 0; animation: fadeIn 0.5s ease-out 0.6s forwards;">
+          I blend <span class="gradient-text">creative vision</span> with <span class="gradient-text">technical expertise</span> to craft digital experiences that are both functional and delightful.
+        </p>
+        
+        <div style="margin-top: 2.5rem; opacity: 0; animation: fadeIn 0.5s ease-out 0.8s forwards;">
+          <a href="#projects" class="btn btn-primary">
+            View My Work
+            <i class="fas fa-arrow-right ml-1 arrow-right"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="gradient-blob"></div>
+        
+        <div class="animated-gradient-border">
+          <div class="profile-circle floating bg-gradient-to-r from-primary to-brand-secondary bg-clip-text text-transparent">
+            MT
+          </div>
+        </div>
+        
+        <div class="emoji-bubble bottom-right pulsing">
+          <span>👋</span>
+        </div>
+        
+        <div class="emoji-bubble top-left pulsing">
+          <span>👩‍💻</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="about-container">
+      <div class="about-me">
+        <h2 class="section-title">About Me</h2>
+        
+        <div class="profile-header">
+          <div class="avatar">MT</div>
+          <div>
+            <h3 class="text-lg font-serif mb-2">Who am I?</h3>
+            <p class="text-muted-foreground">Computing student, creative technologist, problem solver</p>
+          </div>
+        </div>
+        
+        <p class="mb-4">
+          I'm a third-year Computing student with a passion for creative technology, 
+          <span class="font-medium"> deep learning</span>, and 
+          <span class="font-medium"> user-focused design</span>. 
+          My projects explore everything from AI-driven handwriting models to mobile health apps and playful puzzle games.
+        </p>
+        <p class="mb-6">
+          Whether it's building <span class="fancy-underline">interactive experiences</span> or solving <span class="fancy-underline">real-world problems</span>, I enjoy turning technical ideas into 
+          meaningful digital products.
+        </p>
+        
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-content">
+              <span class="text-lg mr-2">🧠</span>
+              <span class="text-sm">AI Enthusiast</span>
+            </div>
+          </div>
+          <div class="skill-card green">
+            <div class="skill-content">
+              <span class="text-lg mr-2">📱</span>
+              <span class="text-sm">Mobile Dev</span>
+            </div>
+          </div>
+          <div class="skill-card pink">
+            <div class="skill-content">
+              <span class="text-lg mr-2">🎨</span>
+              <span class="text-sm">UX Design</span>
+            </div>
+          </div>
+        </div>
+        
+        <a href="/about.html" class="btn btn-primary">
+          Learn More About Me
+          <i class="fas fa-arrow-right ml-1"></i>
+        </a>
+      </div>
+      
+      <div class="about-portfolio">
+        <h2 class="section-title">About This Portfolio</h2>
+        
+        <div class="quote-box">
+          <p class="quote-text">
+            "I believe technology should be intuitive, accessible, and bring joy to its users."
+          </p>
+        </div>
+        
+        <p class="mb-4">
+          This portfolio is a curated journey through my academic and creative work from Year 1 to Year 3. 
+          It includes <span class="font-medium">AI models</span>, <span class="font-medium">Android apps</span>, <span class="font-medium">chatbot prototypes</span>, <span class="font-medium">game development</span>, <span class="font-medium">web design</span>, and <span class="font-medium">storytelling projects</span>—all developed as part of my degree coursework and personal exploration.
+        </p>
+        <p class="mb-4">
+          Each project showcases different skills: machine learning, UI/UX design, game logic, mobile app development, and more.
+        </p>
+        
+        <div class="stats-container">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-circle">
+                <span class="text-xl">15+</span>
+              </div>
+              <p class="stat-label">Projects Completed</p>
             </div>
             
-        </section>
+            <div class="stat-item">
+              <div class="stat-circle peach">
+                <span class="text-xl">6</span>
+              </div>
+              <p class="stat-label">Technologies</p>
+            </div>
+            
+            <div class="stat-item">
+              <div class="stat-circle green">
+                <span class="text-xl">3</span>
+              </div>
+              <p class="stat-label">Years Studying</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <footer>
-        <p>&copy; 2024 Maryam Tahir</p>
-    </footer>
+  </section>
+  
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <div class="projects-container">
+      <div class="mb-12">
+        <h2 class="section-title">Featured Projects</h2>
+        
+        <p class="mb-10 max-w-2xl">
+          A selection of my academic and creative work ranging from AI models to mobile apps and game development. 
+          Each project showcases different technical skills and creative approaches.
+        </p>
+        
+        <div class="tags-container">
+          <div class="tag">
+            <span class="mr-1">🧠</span>
+            Machine Learning
+          </div>
+          <div class="tag">
+            <span class="mr-1">📱</span>
+            Mobile Apps
+          </div>
+          <div class="tag">
+            <span class="mr-1">🤖</span>
+            AI & Chatbots
+          </div>
+          <div class="tag">
+            <span class="mr-1">🎮</span>
+            Game Design
+          </div>
+          <div class="tag">
+            <span class="mr-1">🌍</span>
+            Web Projects
+          </div>
+          <div class="tag">
+            <span class="mr-1">🎨</span>
+            Creative Tech
+          </div>
+        </div>
+      </div>
+      
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Projects will be loaded here by JavaScript -->
+      </div>
+      
+      <div class="mt-12" style="display: flex; justify-content: center; align-items: center; width: 100%;"></div>
+        <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-top: 30px;">
+          <a href="/projects.html" class="btn btn-outline">
+            View All Projects
+            <i class="fas fa-arrow-right ml-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-content">
+        <div>
+          <h3 class="font-medium text-lg mb-2">Maryam Tahir</h3>
+          <p class="text-sm text-muted-foreground">Computing Student</p>
+        </div>
+        <div class="social-icons" style="display: flex; gap: 0.5rem; align-items: center; justify-content: flex-end; margin-left: auto;">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon" style="color: #333; background: #fff; border-radius: 50%; padding: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: box-shadow 0.2s, transform 0.2s;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C5.27.65 4.09 1 4.09 1A5.07 5.07 0 0 0 4 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 21.13V25"></path></svg>
+            <span class="sr-only">GitHub</span>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon" style="color: #0A66C2; background: #fff; border-radius: 50%; padding: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: box-shadow 0.2s, transform 0.2s;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            <span class="sr-only">LinkedIn</span>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="social-icon" style="color: #1DA1F2; background: #fff; border-radius: 50%; padding: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: box-shadow 0.2s, transform 0.2s;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22.4.36a9.09 9.09 0 0 1-2.88 1.1A4.52 4.52 0 0 0 16.5 0c-2.5 0-4.5 2-4.5 4.5 0 .35.04.7.11 1.03A12.94 12.94 0 0 1 3 1.1a4.48 4.48 0 0 0-.61 2.27c0 1.56.8 2.93 2.02 3.74A4.48 4.48 0 0 1 2 6.13v.06c0 2.18 1.55 4 3.8 4.42a4.52 4.52 0 0 1-2.04.08c.57 1.78 2.23 3.08 4.2 3.12A9.05 9.05 0 0 1 1 19.54a12.8 12.8 0 0 0 6.95 2.04c8.34 0 12.9-6.92 12.9-12.92 0-.2 0-.39-.01-.58A9.22 9.22 0 0 0 23 3z"/></svg>
+            <span class="sr-only">Twitter</span>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon" style="color: #E4405F; background: #fff; border-radius: 50%; padding: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: box-shadow 0.2s, transform 0.2s;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            <span class="sr-only">Instagram</span>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon" style="color: #1877F2; background: #fff; border-radius: 50%; padding: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: box-shadow 0.2s, transform 0.2s;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a4 4 0 0 0-4 4v3H7v4h4v8h4v-8h3l1-4h-4V6a1 1 0 0 1 1-1h3z"/></svg>
+            <span class="sr-only">Facebook</span>
+          </a>
+          <a href="mailto:email@example.com" aria-label="Email" class="social-icon" style="color: #EA4335; background: #fff; border-radius: 50%; padding: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: box-shadow 0.2s, transform 0.2s;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span class="sr-only">Email</span>
+          </a>
+        </div>
+        <style>
+          .social-icons .social-icon:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+            transform: scale(1.2) rotate(-10deg);
+            transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.2s;
+          }
+          .social-icons .social-icon:active {
+            transform: scale(0.95);
+          }
+        </style>
+      </div>
+      
+      <div class="footer-divider">
+        <p>© <span id="currentYear"></span> Maryam Tahir. All rights reserved.</p>
+        <p class="mt-2">Designed with Kindness - Built with fun</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    menuToggle.addEventListener('click', function() {
+      mobileMenu.classList.toggle('active');
+      
+      // Change icon
+      const icon = menuToggle.querySelector('i');
+      if (mobileMenu.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+    
+    // Close mobile menu when clicking a link
+    const navLinks = document.querySelectorAll('.mobile-menu .nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        mobileMenu.classList.remove('active');
+        menuToggle.querySelector('i').classList.remove('fa-times');
+        menuToggle.querySelector('i').classList.add('fa-bars');
+      });
+    });
+    
+    // Set current year in footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    
+    // Projects data
+    const projects = [
+      {
+        id: 'handwriting-similarity',
+        title: 'Handwriting Similarity Checker',
+        category: 'Machine Learning & Deep Learning',
+        categoryType: 'ml',
+        description: 'Deep Learning model using image feature extraction and similarity detection.',
+        image: 'https://via.placeholder.com/600x400?text=Handwriting+Similarity'
+      },
+      {
+        id: 'nutriguide-app',
+        title: 'NutriGuide App + Walkthrough',
+        category: 'Mobile App Development',
+        categoryType: 'mobile',
+        description: 'Health-focused app with a clean UI and recipe/nutritional guidance.',
+        image: 'https://via.placeholder.com/600x400?text=NutriGuide+App'
+      },
+      {
+        id: 'volunteer-chatbot',
+        title: 'VolunteerUnity Chatbot',
+        category: 'AI Chatbots & Creative Apps',
+        categoryType: 'ai',
+        description: 'Conversational assistant for volunteer recruitment and onboarding.',
+        image: 'https://via.placeholder.com/600x400?text=Chatbot'
+      },
+      {
+        id: 'wordup-game',
+        title: 'Word Up! Game + Technical Breakdown',
+        category: 'Game Design & Development',
+        categoryType: 'game',
+        description: 'A word scramble puzzle game built in Unity.',
+        image: 'https://via.placeholder.com/600x400?text=Word+Up+Game'
+      },
+      {
+        id: 'tourism-website',
+        title: 'Tourism Website – Roam Radar',
+        category: 'Web Projects',
+        categoryType: 'web',
+        description: 'Clean UI/UX for showcasing UAE tourist spots.',
+        image: 'https://via.placeholder.com/600x400?text=Tourism+Website'
+      },
+      {
+        id: 'twine-story',
+        title: 'Twine Story – Life Play',
+        category: 'Creative Tech & Storytelling',
+        categoryType: 'creative',
+        description: 'A digital narrative experience in interactive storytelling.',
+        image: 'https://via.placeholder.com/600x400?text=Twine+Story'
+      }
+    ];
+    
+    // Render projects
+    const projectsGrid = document.getElementById('projectsGrid');
+    
+    function renderProjects() {
+      projectsGrid.innerHTML = '';
+      
+      projects.forEach(project => {
+        const projectElement = document.createElement('div');
+        projectElement.className = 'project-card';
+        projectElement.innerHTML = `
+          <a href="/project.html?id=${project.id}" class="project-card">
+            <div class="project-image">
+              <img src="${project.image}" alt="${project.title}">
+              <div class="project-overlay">
+                <span class="text-sm font-medium">View Project Details →</span>
+              </div>
+            </div>
+            <div class="project-details">
+              <div class="project-category">
+                <div class="project-icon">
+                  ${getCategoryIcon(project.categoryType)}
+                </div>
+                <span class="text-sm font-medium" style="color: orangered;">${project.category}</span>
+              </div>
+              <h3 class="project-name font-serif">${project.title}</h3>
+              <p class="project-description">${project.description}</p>
+            </div>
+          </a>
+        `;
+        
+        projectsGrid.appendChild(projectElement);
+      });
+    }
+    
+    function getCategoryIcon(type) {
+      switch(type) {
+        case 'ml':
+          return '<i class="fas fa-brain"></i>';
+        case 'mobile':
+          return '<i class="fas fa-mobile-alt"></i>';
+        case 'ai':
+          return '<i class="fas fa-robot"></i>';
+        case 'game':
+          return '<i class="fas fa-gamepad"></i>';
+        case 'web':
+          return '<i class="fas fa-globe"></i>';
+        case 'creative':
+          return '<i class="fas fa-palette"></i>';
+        default:
+          return '';
+      }
+    }
+    
+    // Initialize
+    document.addEventListener('DOMContentLoaded', function() {
+      renderProjects();
+      window.scrollTo(0, 0);
+    });
+  </script>
 </body>
 </html>

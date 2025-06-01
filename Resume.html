@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume | Maryam Tahir</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lucide/1.0.0/lucide.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --primary: #3b82f6;
+      --secondary: #ec7c48;
+      --accent: #10b981;
+      --soft-blue: #dbeafe;
+      --soft-green: #dcfce7;
+      --soft-pink: #fce7f3;
+      --soft-yellow: #fef9c3;
+      --soft-peach: #fee2e2;
+      --soft-gray: #f3f4f6;
+      --neutral-light: #e5e7eb;
+      --muted-foreground: #6b7280;
+      --brand-primary: #3b82f6;
+      --brand-secondary: #ec4899;
+      --brand-accent: #10b981;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Playfair Display', sans-serif;
+      line-height: 1.6;
+      color: #111827;
+      font-size: 1.25rem; /* increased from 1.15rem */
+      background-color: #f9fafb;
+      min-height: 100vh;
+    }
+
+    
+    .font-serif {
+      font-family: 'Playfair Display', serif;
+    }
+    
+    /* Navigation */
+    header {
+      padding: 1.5rem 1.5rem;
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(8px);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+    }
+    
+    .nav-container {
+      max-width: 72rem;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo {
+      font-weight: 500;
+      font-size: 1.125rem;
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      padding: 0.5rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .desktop-nav {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    
+    .nav-link {
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+      transition: color 0.2s;
+    }
+    
+    .nav-link:hover {
+      color: var(--primary);
+    }
+    
+    .nav-link.active {
+      color: var(--primary);
+    }
+    
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: -0.25rem;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--primary);
+    }
+    .pd{
+      padding: 5px 15px;
+    }
+    
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      background-color: white;
+      z-index: 40;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    
+    .mobile-menu.show {
+      transform: translateX(0);
+    }
+    
+    .mobile-menu .nav-link {
+      font-size: 1.25rem;
+    }
+    
+    /* Main content */
+    main {
+      padding-top: 8rem;
+      padding-bottom: 5rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    
+    .max-w-4xl {
+      max-width: 75rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .max-w-6xl {
+      max-width: 72rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    /* Resume styles */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary);
+      color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+    
+    .shadow-md {
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .shadow-sm {
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.17);
+      padding: 5px 10px;
+    }
+    
+    .shadow-lg {
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .group:hover .group-hover-opacity-100 {
+      opacity: 1;
+    }
+    
+    .bg-white {
+      background-color: white;
+    }
+    
+    .bg-soft-blue {
+      background-color: var(--soft-blue);
+    }
+    
+    .bg-soft-green {
+      background-color: var(--soft-green);
+    }
+    
+    .bg-soft-pink {
+      background-color: var(--soft-pink);
+    }
+    
+    .bg-soft-yellow {
+      background-color: var(--soft-yellow);
+    }
+    
+    .bg-soft-peach {
+      background-color: var(--soft-peach);
+    }
+    
+    .bg-soft-gray {
+      background-color: var(--soft-gray);
+    }
+    
+    .bg-gradient-to-r {
+      background-image: linear-gradient(to right, var(--primary), var(--secondary));
+    }
+    
+    
+    
+    .text-primary {
+      color: var(--primary);
+    }
+    
+    .text-brand-secondary {
+      color: var(--secondary);
+    }
+    
+    .text-brand-accent {
+      color: var(--accent);
+    }
+    
+    .text-muted-foreground {
+      color: var(--muted-foreground);
+    }
+    
+    .border {
+      border: 1px solid var(--neutral-light);
+    }
+    
+    .border-b {
+      border-bottom: 1px solid var(--neutral-light);
+    }
+    
+    .border-l-4 {
+      border-left: 4px solid;
+    }
+    
+    .border-brand-primary {
+      border-color: var(--primary);
+    }
+    
+    .border-brand-secondary {
+      border-color: var(--secondary);
+    }
+    
+    .border-brand-accent {
+      border-color: var(--accent);
+    }
+    
+    .rounded-xl {
+      border-radius: 0.75rem;
+    }
+    
+    .rounded-lg {
+      border-radius: 0.5rem;
+    }
+    
+    .rounded-full {
+      border-radius: 9999px;
+    }
+    
+    .px-6 {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    
+    .py-12 {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+    
+    .py-6 {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+    
+    .py-20 {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+    
+    .pt-32 {
+      padding-top: 8rem;
+    }
+    
+    .pb-20 {
+      padding-bottom: 5rem;
+    }
+    
+    .p-6 {
+      padding: 1.5rem;
+    }
+    
+    .p-4 {
+      padding: 1rem;
+    }
+    
+    .p-5 {
+      padding: 1.25rem;
+    }
+    
+    .mb-10 {
+      margin-bottom: 2.5rem;
+    }
+    
+    .mb-12 {
+      margin-bottom: 3rem;
+    }
+    
+    .mb-6 {
+      margin-bottom: 1.5rem;
+    }
+    
+    .mb-4 {
+      margin-bottom: 1rem;
+    }
+    
+    .mb-3 {
+      margin-bottom: 0.75rem;
+    }
+    
+    .mb-2 {
+      margin-bottom: 0.5rem;
+    }
+    
+    .mb-1 {
+      margin-bottom: 0.25rem;
+    }
+    
+    .mt-2 {
+      margin-top: 0.5rem;
+    }
+    
+    .mt-4 {
+      margin-top: 1rem;
+    }
+    
+    .mt-8 {
+      margin-top: 2rem;
+    }
+    
+    .ml-2 {
+      margin-left: 0.5rem;
+    }
+    
+    .ml-7 {
+      margin-left: 1.75rem;
+    }
+    
+    .mr-2 {
+      margin-right: 0.5rem;
+    }
+    
+    .mr-1 {
+      margin-right: 0.25rem;
+    }
+    
+    .flex {
+      display: flex;
+    }
+    
+    .flex-col {
+      flex-direction: row;
+    }
+    
+    .items-center {
+      align-items: center;
+    }
+    
+    .items-start {
+      align-items: flex-start;
+    }
+    
+    .justify-between {
+      justify-content: space-between;
+    }
+    
+    .justify-center {
+      justify-content: center;
+    }
+    
+    .gap-4 {
+      gap: 1rem;
+    }
+    
+    .gap-6 {
+      gap: 1.5rem;
+    }
+    
+    .gap-2 {
+      gap: 0.5rem;
+    }
+    
+    .space-y-6 > * + * {
+      margin-top: 1.5rem;
+    }
+    
+    .space-y-8 > * + * {
+      margin-top: 2rem;
+    }
+    
+    .space-y-1 > * + * {
+      margin-top: 0.25rem;
+    }
+    
+    .text-lg {
+      font-size: 1.125rem;
+    }
+    
+    .text-xl {
+      font-size: 1.25rem;
+    }
+    
+    .text-3xl {
+      font-size: 1.875rem;
+    }
+    
+    .text-4xl {
+      font-size: 2.25rem;
+    }
+    
+    .text-sm {
+      font-size: 0.875rem;
+    }
+    
+    .text-xs {
+      font-size: 0.75rem;
+    }
+    
+    .font-medium {
+      font-weight: 500;
+    }
+    
+    .bg-clip-text {
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+    
+    .text-transparent {
+      color: transparent;
+    }
+    
+    .hover-underline:hover {
+      text-decoration: underline;
+    }
+    
+    .list-disc {
+      list-style-type: disc;
+    }
+    
+    .pl-6 {
+      padding-left: 1.5rem;
+    }
+    
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+    
+    .transition-opacity {
+      transition-property: opacity;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+    
+    .transition-shadow {
+      transition-property: box-shadow;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+    
+    .transition-transform {
+      transition-property: transform;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 150ms;
+    }
+    
+    .duration-300 {
+      transition-duration: 300ms;
+    }
+    
+    .ease-in-out {
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .opacity-0 {
+      opacity: 0;
+    }
+    
+    .grid {
+      display: grid;
+    }
+    
+    .grid-cols-1 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    
+    .grid-cols-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    
+    .relative {
+      position: relative;
+    }
+    
+    .absolute {
+      position: absolute;
+    }
+    
+    .inset-0 {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+    
+    .bottom-0 {
+      bottom: 0;
+    }
+    
+    .left-0 {
+      left: 0;
+    }
+    
+    .z-40 {
+      z-index: 40;
+    }
+    
+    .z-50 {
+      z-index: 50;
+    }
+    
+    .w-24 {
+      width: 6rem;
+    }
+    
+    .w-6 {
+      width: 1.5rem;
+    }
+    
+    .w-5 {
+      width: 1.25rem;
+    }
+    
+    .w-1\.5 {
+      width: 0.375rem;
+    }
+    
+    .h-\[3px\] {
+      height: 3px;
+    }
+    
+    .h-6 {
+      height: 1.5rem;
+    }
+    
+    .h-5 {
+      height: 1.25rem;
+    }
+    
+    .h-1\.5 {
+      height: 0.375rem;
+    }
+    
+    /* Footer */
+ 
+    
+    /* Animation classes */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes scale {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    @keyframes rotate {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(-10deg); }
+      50% { transform: rotate(10deg); }
+      75% { transform: rotate(-10deg); }
+      100% { transform: rotate(0deg); }
+    }
+    
+    .animate-fade-in-up {
+      animation: fadeInUp 0.5s ease-out forwards;
+    }
+    
+    .animate-fade-in-down {
+      animation: fadeInDown 0.5s ease-out forwards;
+    }
+    
+    .animate-scale {
+      animation: scale 0.5s ease-in-out;
+    }
+    
+    .animate-rotate {
+      animation: rotate 0.5s ease-in-out;
+    }
+    
+    .stagger-delay-1 {
+      animation-delay: 0.1s;
+    }
+    
+    .stagger-delay-2 {
+      animation-delay: 0.2s;
+    }
+    
+    .stagger-delay-3 {
+      animation-delay: 0.3s;
+    }
+    
+    .stagger-delay-4 {
+      animation-delay: 0.4s;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .desktop-nav {
+        display: none;
+      }
+      
+      .md-flex-row {
+        flex-direction: row;
+      }
+      
+      .md-items-center {
+        align-items: center;
+      }
+      
+      .md-justify-between {
+        justify-content: space-between;
+      }
+      
+      .md-grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      
+      .md-p-10 {
+        padding: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo">Maryam Tahir</a>
+      
+      <button class="mobile-menu-btn" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <nav class="desktop-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="Projects.html" class="nav-link">Projects</a>
+        <a href="About.html" class="nav-link">About</a>
+        <a href="Resume.html" class="nav-link active">Resume</a>
+        <a href="Contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+    
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html" class="nav-link text-xl">Home</a>
+      <a href="Projects.html" class="nav-link text-xl">Projects</a>
+      <a href="About.html" class="nav-link text-xl">About</a>
+      <a href="Resume.html" class="nav-link text-xl active">Resume</a>
+      <a href="Contact.html" class="nav-link text-xl">Contact</a>
+    </div>
+  </header>
+  
+  <main class="pt-32 pb-20 px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-10">
+        <h1 class="text-4xl font-serif font-medium mb-4 md:mb-0 animate-fade-in-down">
+          Resume
+        </h1>
+        <button class="btn btn-primary group shadow-md animate-fade-in-down" style="animation-delay: 0.2s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <i data-lucide="download" class="mr-2" style="width:16px;height:16px"></i>
+          Download PDF
+          <i data-lucide="arrow-right" class="ml-1 opacity-0 group-hover-opacity-100 transition-opacity" style="width:16px;height:16px"></i>
+        </button>
+      </div>
+      
+      <div class="bg-white border border-neutral-light rounded-xl p-6 md:p-10 shadow-lg">
+        <div class="mb-12 animate-fade-in-up">
+          <h2 class="text-3xl bg-gradient-to-r from-primary to-brand-secondary bg-clip-text text-transparent">Maryam Tahir</h2>
+          <p class="text-muted-foreground mt-2">Computing Student</p>
+          <div class="flex flex-wrap gap-4 mt-4">
+            <div class="flex items-center text-sm">
+              <span class="text-muted-foreground ">Email:</span>
+              <a href="mailto:t03maryam@gmail.com" class="ml-2 text-brand-primary hover-underline bg-gradient-to-r from-primary to-brand-secondary bg-clip-text text-transparent">t03maryam@gmail.com</a>
+            </div>
+            <div class="flex items-center text-sm">
+              <span class="text-muted-foreground">LinkedIn:</span>
+              <a href="https://www.linkedin.com/in/maryam-tahir-698a6224b/" target="_blank" rel="noopener noreferrer" class="ml-2 text-brand-primary hover-underline bg-gradient-to-r from-primary to-brand-secondary bg-clip-text text-transparent">linkedin.com/maryamtahir</a>
+            </div>
+            <div class="flex items-center text-sm">
+              <span class="text-muted-foreground">GitHub:</span>
+              <a href="https://github.com/maryam-tahirr" target="_blank" rel="noopener noreferrer" class="ml-2 text-brand-primary hover-underline bg-gradient-to-r from-primary to-brand-secondary bg-clip-text text-transparent">github.com/maryam-tahirr</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mb-12 animate-fade-in-up stagger-delay-1">
+          <h3 class="text-xl font-serif font-medium mb-4 pb-2 border-b relative">
+            <span class="bg-soft-blue/30 px-2 py-1 rounded-md">Education</span>
+            <span class="absolute bottom-0 left-0 h-[3px] w-24 bg-gradient-to-r from-brand-primary to-brand-secondary"></span>
+          </h3>
+          <div class="mb-4">
+            <div class="flex flex-col md:flex-row justify-between mb-1">
+              <h4 class="font-medium text-lg">BSc in Computing</h4>
+              <span class="pd text-sm bg-soft-gray px-2 py-1 rounded-full text-muted-foreground inline-block">2022 - Present</span>
+            </div>
+            <p class="text-brand-secondary font-medium">University Name</p>
+            <p class="mt-2 text-sm">
+              Coursework: Algorithm Design, Data Structures, Software Engineering, Machine Learning, Web Development, Mobile App Development, 
+              Game Design, Human-Computer Interaction
+            </p>
+          </div>
+        </div>
+        
+        <div class="mb-12 animate-fade-in-up stagger-delay-2">
+          <h3 class="text-xl font-serif font-medium mb-4 pb-2 border-b relative">
+            <span class="bg-soft-peach/30 px-2 py-1 rounded-md">Technical Skills</span>
+            <span class="absolute bottom-0 left-0 h-[3px] w-24 bg-gradient-to-r from-brand-primary to-brand-secondary"></span>
+          </h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="from-white to-soft-blue/10 p-4 rounded-lg shadow-sm">
+              <h4 class="font-medium mb-3 flex items-center">
+                <span class="w-6 h-6 rounded-full bg-soft-blue flex items-center justify-center mr-2 text-xs">⌨️</span>
+                Programming Languages
+              </h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="bg-white px-2 py-1 rounded-full text-xs shadow-sm">Python</span>
+                <span class="bg-white px-2 py-1 rounded-full text-xs shadow-sm">Java</span>
+                <span class="bg-white px-2 py-1 rounded-full text-xs shadow-sm">JavaScript</span>
+                <span class="bg-white px-2 py-1 rounded-full text-xs shadow-sm">C#</span>
+                <span class="bg-white px-2 py-1 rounded-full text-xs shadow-sm">C++</span>
+                <span class="bg-white px-2 py-1 rounded-full text-xs shadow-sm">HTML/CSS</span>
+                <span class="bg-white px-2 py-1 rounded-full text-xs shadow-sm">Kotlin</span>
+              </div>
+            </div>
+            <div class="from-white to-soft-green/10 p-4 rounded-lg shadow-sm">
+              <h4 class="font-medium mb-3 flex items-center">
+                <span class="w-6 h-6 rounded-full bg-soft-green flex items-center justify-center mr-2 text-xs">🛠️</span>
+                Frameworks & Libraries
+              </h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="bg-white px-2 py-1 rounded-full text-xs shadow-sm">TensorFlow</span>
+                <span class="bg-white px-2 py-1 rounded-full text-xs shadow-sm">React</span>
+                <span class="bg-white px-2 py-1 rounded-full text-xs shadow-sm">Android SDK</span>
+                <span class="bg-white px-2 py-1 rounded-full text-xs shadow-sm">Unity</span>
+                <span class="bg-white px-2 py-1 rounded-full text-xs shadow-sm">Bootstrap</span>
+              </div>
+            </div>
+            <div class="from-white to-soft-pink/10 p-4 rounded-lg shadow-sm">
+              <h4 class="font-medium mb-3 flex items-center">
+                <span class="w-6 h-6 rounded-full bg-soft-pink flex items-center justify-center mr-2 text-xs">💻</span>
+                Tools & Software
+              </h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="bg-white px-2 py-1 rounded-full text-xs shadow-sm">Git</span>
+                <span class="bg-white px-2 py-1 rounded-full text-xs shadow-sm">Android Studio</span>
+                <span class="bg-white px-2 py-1 rounded-full text-xs shadow-sm">VS Code</span>
+                <span class="bg-white px-2 py-1 rounded-full text-xs shadow-sm">Figma</span>
+                <span class="bg-white px-2 py-1 rounded-full text-xs shadow-sm">Photopea</span>
+              </div>
+            </div>
+            <div class=" from-white to-soft-yellow/10 p-4 rounded-lg shadow-sm">
+              <h4 class="font-medium mb-3 flex items-center">
+                <span class="w-6 h-6 rounded-full bg-soft-yellow flex items-center justify-center mr-2 text-xs">🧠</span>
+                Concepts & Methodologies
+              </h4>
+              <div class="flex flex-wrap gap-2">
+                <span class="bg-white px-2 py-1 rounded-full text-xs shadow-sm">UI/UX Design</span>
+                <span class="bg-white px-2 py-1 rounded-full text-xs shadow-sm">Machine Learning</span>
+                <span class="bg-white px-2 py-1 rounded-full text-xs shadow-sm">Agile Development</span>
+                <span class="bg-white px-2 py-1 rounded-full text-xs shadow-sm">OOP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mb-12 animate-fade-in-up stagger-delay-3">
+          <h3 class="text-xl font-serif font-medium mb-6 pb-2 border-b relative">
+            <span class="bg-soft-green/30 px-2 py-1 rounded-md">Projects</span>
+            <span class="absolute bottom-0 left-0 h-[3px] w-24 bg-gradient-to-r from-brand-primary to-brand-secondary"></span>
+          </h3>
+          <div class="space-y-8">
+            <div class="  from-white to-soft-green/10 p-5 rounded-lg shadow-sm border-l-4 border-brand-accent">
+              <div class="flex flex-col md:flex-row justify-between mb-2">
+                <h4 class="font-medium text-lg">Chromatique</h4>
+                <span class="pd text-sm bg-soft-green px-2 py-1 rounded-full text-xs inline-block">2025</span>
+              </div>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="bg-white px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-primary mr-1"></span>
+                  React Native
+                </span>
+                <span class="bg-white px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-secondary mr-1"></span>
+                  TypeScript
+                </span>
+                <span class="bg-white px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-secondary mr-1"></span>
+                  Tailwind CSS
+                </span>
+                <span class="bg-white px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-secondary mr-1"></span>
+                  Firebase
+                </span>
+              </div>
+              <ul class="list-disc pl-6 text-sm space-y-1">
+                <li>Developed a personalized fashion and wardrobe management app</li>
+                <li>Built the complete frontend UI with custom components and responsive design</li>
+                <li>Integrated seasonal color theory for outfit recommendations</li>
+                <li>Implemented wardrobe upload, outfit builder, and user tagging features</li>
+                <li>Collaborated on backend structure and fixed integration bugs</li>
+
+              </ul>
+            </div>
+            <div class="  from-white to-soft-blue/10 p-5 rounded-lg shadow-sm border-l-4 border-brand-primary">
+              <div class="flex flex-col md:flex-row justify-between mb-2">
+                <h4 class="font-medium text-lg">Handwriting Similarity Checker</h4>
+                <span class="pd text-sm bg-soft-blue px-2 py-1 rounded-full text-xs inline-block">2023</span>
+              </div>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="bg-white px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-primary mr-1"></span>
+                  TensorFlow
+                </span>
+                <span class="bg-white px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-secondary mr-1"></span>
+                  Python
+                </span>
+                <span class="bg-white px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-accent mr-1"></span>
+                  OpenCV
+                </span>
+              </div>
+              <ul class="list-disc pl-6 text-sm space-y-1">
+                <li>Developed a deep learning model using CNNs to compare handwriting samples</li>
+                <li>Implemented image processing techniques to enhance feature extraction</li>
+                <li>Achieved 92% accuracy in identifying matching handwriting samples</li>
+              </ul>
+            </div>
+            
+            <div class="  from-white to-soft-peach/10 p-5 rounded-lg shadow-sm border-l-4 border-brand-secondary">
+              <div class="flex flex-col md:flex-row justify-between mb-2">
+                <h4 class="font-medium text-lg">NutriGuide Mobile App</h4>
+                <span class="pd text-sm bg-soft-peach px-2 py-1 rounded-full text-xs inline-block">2023</span>
+              </div>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="bg-white px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-primary mr-1"></span>
+                  Android Studio
+                </span>
+                <span class="bg-white px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-secondary mr-1"></span>
+                  Java
+                </span>
+                <span class="bg-white px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-accent mr-1"></span>
+                  Kotlin
+                </span>
+                <span class="bg-white px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-accent mr-1"></span>
+                  Canva
+                </span>
+              </div>
+              <ul class="list-disc pl-6 text-sm space-y-1">
+                <li>Created a nutrition and recipe management app with a clean, user-friendly interface</li>
+                <li>Implemented features for nutritional tracking, meal planning, and personalized recommendations</li>
+                <li>Integrated Firebase for real-time data synchronization and user authentication</li>
+              </ul>
+            </div>
+            
+            <div class="  from-white to-soft-green/10 p-5 rounded-lg shadow-sm border-l-4 border-brand-accent">
+              <div class="flex flex-col md:flex-row justify-between mb-2">
+                <h4 class="font-medium text-lg">Word Up! Game</h4>
+                <span class="pd text-sm bg-soft-green px-2 py-1 rounded-full text-xs inline-block">2022</span>
+              </div>
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="bg-white px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-primary mr-1"></span>
+                  Unity
+                </span>
+                <span class="bg-white px-2 py-0.5 rounded-full text-xs shadow-sm flex items-center">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand-secondary mr-1"></span>
+                  C#
+                </span>
+              </div>
+              <ul class="list-disc pl-6 text-sm space-y-1">
+                <li>Designed and developed a word puzzle game with multiple difficulty levels</li>
+                <li>Implemented game mechanics, user interface, and scoring system</li>
+                <li>Created custom animations and visual effects to enhance player experience</li>
+              </ul>
+            </div>
+
+
+          </div>
+        </div>
+        
+        <div class="animate-fade-in-up stagger-delay-4">
+          <h3 class="text-xl font-serif font-medium mb-6 pb-2 border-b relative">
+            <span class="bg-soft-pink/30 px-2 py-1 rounded-md">Certifications & Additional Education</span>
+            <span class="absolute bottom-0 left-0 h-[3px] w-24 bg-gradient-to-r from-brand-primary to-brand-secondary"></span>
+          </h3>
+          <div class="space-y-6">
+            <div class="p-4   from-white to-soft-pink/10 rounded-lg shadow-sm">
+              <div class="flex flex-col md:flex-row justify-between items-start mb-1">
+                <h4 class="font-medium flex items-center">
+                  <span class="w-5 h-5 rounded-full bg-soft-pink flex items-center justify-center mr-2 text-xs">🏆</span>
+                  Machine Learning Specialization
+                </h4>
+                <span class="text-sm bg-white px-2 py-1 rounded-full text-xs inline-block shadow-sm">2023</span>
+              </div>
+              <p class="text-sm text-brand-secondary ml-7">Coursera - Stanford University</p>
+            </div>
+            <div class="p-4   from-white to-soft-blue/10 rounded-lg shadow-sm">
+              <div class="flex flex-col md:flex-row justify-between items-start mb-1">
+                <h4 class="font-medium flex items-center">
+                  <span class="w-5 h-5 rounded-full bg-soft-blue flex items-center justify-center mr-2 text-xs">🏆</span>
+                  Android App Development
+                </h4>
+                <span class="text-sm bg-white px-2 py-1 rounded-full text-xs inline-block shadow-sm">2022</span>
+              </div>
+              <p class="text-sm text-brand-secondary ml-7">Google Developers Training</p>
+            </div>
+            <div class="p-4   from-white to-soft-peach/10 rounded-lg shadow-sm">
+              <div class="flex flex-col md:flex-row justify-between items-start mb-1">
+                <h4 class="font-medium flex items-center">
+                  <span class="w-5 h-5 rounded-full bg-soft-peach flex items-center justify-center mr-2 text-xs">🏆</span>
+                  User Experience Design
+                </h4>
+                <span class="text-sm bg-white px-2 py-1 rounded-full text-xs inline-block shadow-sm">2022</span>
+              </div>
+              <p class="text-sm text-brand-secondary ml-7">Interaction Design Foundation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+    <footer>
+    <div class="footer-container">
+      <div class="footer-content">
+        <div>
+          <h3 class="font-medium text-lg mb-2">Maryam Tahir</h3>
+          <p class="text-sm text-muted-foreground">Computing Student</p>
+        </div>
+        <div class="social-icons" style="display: flex; gap: 0.5rem; align-items: center; justify-content: flex-end; margin-left: auto;">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon" style="color: #333; background: #fff; border-radius: 50%; padding: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: box-shadow 0.2s, transform 0.2s;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C5.27.65 4.09 1 4.09 1A5.07 5.07 0 0 0 4 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 21.13V25"></path></svg>
+            <span class="sr-only">GitHub</span>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon" style="color: #0A66C2; background: #fff; border-radius: 50%; padding: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: box-shadow 0.2s, transform 0.2s;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            <span class="sr-only">LinkedIn</span>
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="social-icon" style="color: #1DA1F2; background: #fff; border-radius: 50%; padding: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: box-shadow 0.2s, transform 0.2s;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22.4.36a9.09 9.09 0 0 1-2.88 1.1A4.52 4.52 0 0 0 16.5 0c-2.5 0-4.5 2-4.5 4.5 0 .35.04.7.11 1.03A12.94 12.94 0 0 1 3 1.1a4.48 4.48 0 0 0-.61 2.27c0 1.56.8 2.93 2.02 3.74A4.48 4.48 0 0 1 2 6.13v.06c0 2.18 1.55 4 3.8 4.42a4.52 4.52 0 0 1-2.04.08c.57 1.78 2.23 3.08 4.2 3.12A9.05 9.05 0 0 1 1 19.54a12.8 12.8 0 0 0 6.95 2.04c8.34 0 12.9-6.92 12.9-12.92 0-.2 0-.39-.01-.58A9.22 9.22 0 0 0 23 3z"/></svg>
+            <span class="sr-only">Twitter</span>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon" style="color: #E4405F; background: #fff; border-radius: 50%; padding: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: box-shadow 0.2s, transform 0.2s;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            <span class="sr-only">Instagram</span>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon" style="color: #1877F2; background: #fff; border-radius: 50%; padding: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: box-shadow 0.2s, transform 0.2s;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a4 4 0 0 0-4 4v3H7v4h4v8h4v-8h3l1-4h-4V6a1 1 0 0 1 1-1h3z"/></svg>
+            <span class="sr-only">Facebook</span>
+          </a>
+          <a href="mailto:email@example.com" aria-label="Email" class="social-icon" style="color: #EA4335; background: #fff; border-radius: 50%; padding: 0.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: box-shadow 0.2s, transform 0.2s;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span class="sr-only">Email</span>
+          </a>
+        </div>
+        <style>
+          .social-icons .social-icon:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+            transform: scale(1.2) rotate(-10deg);
+            transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.2s;
+          }
+          .social-icons .social-icon:active {
+            transform: scale(0.95);
+          }
+        </style>
+      </div>
+      
+      <div class="footer-divider">
+        <p>© <span id="currentYear"></span> Maryam Tahir. All rights reserved.</p>
+        <p class="mt-2">Designed with Kindness - Built with fun</p>
+      </div>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+
+  <script>
+    // Same JavaScript as index.html for navigation and animations
+    // ...
+  </script>
+</body>
+</html>
