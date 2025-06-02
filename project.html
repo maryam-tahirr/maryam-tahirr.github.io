@@ -587,7 +587,6 @@
   </footer>
 
   <script>
-    // Mobile menu toggle
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
     
@@ -595,7 +594,6 @@
       mobileMenu.classList.toggle('active');
     });
     
-    // Close mobile menu when clicking on a link
     const mobileLinks = mobileMenu.querySelectorAll('.nav-link');
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
@@ -603,122 +601,204 @@
       });
     });
     
-    // Set current year in footer
     document.getElementById('currentYear').textContent = new Date().getFullYear();
     
-    // Projects data (would typically come from an API or separate JSON file)
     const projects = [
       {
         id: 'handwriting-similarity',
         title: 'Handwriting Similarity Checker',
         category: 'Machine Learning & Deep Learning',
         categoryType: 'ml',
+        detailedDescription: 'Built a deep learning pipeline to assess similarity in handwriting samples using CNN-based feature extraction and cosine similarity. Useful in education and forensics.',
         description: 'Deep Learning model using image feature extraction and similarity detection.',
-        image: '/Word.png',
-        technologies: ['TensorFlow', 'Python', 'OpenCV', 'Image Processing']
+        image: 'public/Word.png',
+        technologies: ['TensorFlow', 'Python', 'OpenCV', 'Image Processing'],
+        youtube: 'https://youtu.be/gYJnDR9lGi0',
+        artefact: 'https://github.com/maryam-tahirr/HandwritingComparison'
+      },
+     {
+        id: 'self-defence',
+        title: 'Self Defence Website',
+        category: 'Web Projects',
+        categoryType: 'web',
+        detailedDescription: 'A complete redesign of a self-defence awareness website, focused on improving user engagement through better layout, modern typography, and consistent color schemes. Designed the layout in Figma and implemented with HTML and CSS.',
+        description: 'Redesigned Self Defence awareness website using HTML5 and CSS.',
+        image: 'public/self.png',
+        technologies: ['HTML', 'CSS', 'Canva', 'Figma'],
+        youtube: 'https://youtu.be/t_XGbMyoVhY',
+        artefact: 'https://m-ry-m.github.io/'
       },
       {
-        id: 'words-analysis',
-        title: 'Words Analysis with ML',
-        category: 'Machine Learning & Deep Learning',
-        categoryType: 'ml',
-        description: 'Image-to-text pipeline and intelligent word parsing for gamification.',
-        image: '/Word.png',
-        technologies: ['OCR', 'NLP', 'Python', 'scikit-learn']
+        id: 'thuraya-redesign',
+        title: 'Thuraya Website Redesign',
+        category: 'Web Projects',
+        categoryType: 'web',
+        detailedDescription: 'Led the full redesign and development of the Thuraya website. Managed the entire process from wireframing to deployment, ensuring a clean layout, responsive design, optimized performance, and improved content structure. Collaborated with stakeholders to align brand vision with modern UI/UX practices.',
+        description: 'Led complete redesign and development of the Thuraya website with improved UI/UX and performance.',
+        image: 'public/thuraya.png',
+        technologies: ['HTML', 'CSS', 'JavaScript', 'GitHub Pages', 'UI/UX'],
+        youtube: 'https://drive.google.com/file/d/1e3hCoOTwsGmH90zkojZxVlpo-FrDfFoW/view?usp=sharing',
+        artefact: 'https://maryam-tahirr.github.io/ttp.github.io/'
       },
       {
         id: 'nutriguide-app',
         title: 'NutriGuide App + Walkthrough',
         category: 'Mobile App Development',
         categoryType: 'mobile',
+        detailedDescription: 'A recipe and nutrition Android app with food search, caloric breakdown, and diet tips, designed with accessibility and clean UX.',
         description: 'Health-focused app with a clean UI and recipe/nutritional guidance.',
-        image: '/nutri.png',
-        technologies: ['Android Studio', 'Java', 'XML', 'SQLite']
+        image: 'public/nutri.png',
+        technologies: ['Android Studio', 'Java', 'XML', 'SQLite'],
+        youtube: 'https://youtu.be/oQHxPSLM1NY',
+        artefact: ''
       },
       {
         id: 'home-lab-app',
         title: 'Home Lab App',
         category: 'Mobile App Development',
         categoryType: 'mobile',
+        detailedDescription: 'An app for students and instructors to manage and log lab experiments, track materials, and interact in real-time.',
         description: 'Smartphone app for managing lab experiments and student interactions.',
-        image: '/Homelab.png',
-        technologies: ['Android Studio', 'Kotlin', 'Firebase']
+        image: 'public/Homelab.png',
+        technologies: ['Android Studio', 'Kotlin', 'Firebase'],
+        youtube: 'https://youtu.be/oravBSGgflU',
+        artefact: 'https://github.com/maryam-tahirr/HomeLab'
       },
       {
         id: 'capcut-review',
         title: 'Capcut App Review',
         category: 'Mobile App Development',
         categoryType: 'mobile',
+        detailedDescription: 'In-depth UI/UX evaluation of CapCut mobile app. Used heuristic analysis to identify areas for usability improvement.',
         description: 'UI/UX-focused mobile app review and analysis.',
-        image: '/capcut.png',
-        technologies: ['UI Analysis', 'UX Research', 'Heuristic Evaluation']
+        image: 'public/capcut.png',
+        technologies: ['UI Analysis', 'UX Research', 'Heuristic Evaluation'],
+        youtube: 'https://youtu.be/OPTXS_kOKA4',
+        artefact: ''
       },
       {
         id: 'volunteer-chatbot',
         title: 'VolunteerUnity Chatbot',
         category: 'AI Chatbots & Creative Apps',
         categoryType: 'ai',
+        detailedDescription: 'Conversational agent for streamlining volunteer onboarding. Integrated with Google Sheets and dynamic intent recognition.',
         description: 'Conversational assistant for volunteer recruitment and onboarding.',
-        image: '/dialog.jpg',
-        technologies: ['NLP', 'Dialogflow', 'JavaScript', 'Node.js']
+        image: 'public/dialog.jpg',
+        technologies: ['NLP', 'Dialogflow'],
+        youtube: 'https://youtu.be/3y8Buau52uU',
+        artefact: ''
       },
       {
         id: 'wordup-game',
         title: 'Word Up! Game + Technical Breakdown',
         category: 'Game Design & Development',
         categoryType: 'game',
+        detailedDescription: 'A puzzle-based word scramble game built in Unity with a scoring system, time limits, and interactive animations.',
         description: 'A word scramble puzzle game built in Unity.',
-        image: '/wordup.png',
-        technologies: ['Unity', 'C#', 'Game Design', 'UI/UX']
+        image: 'public/wordup.png',
+        technologies: ['Unity', 'C#', 'Game Design', 'UI/UX'],
+        youtube: 'https://youtu.be/bPlzPIYrpvA',
+        artefact: 'https://maryam-tahir.itch.io/wordup'
       },
       {
-        id: 'pokemon-clone',
-        title: 'Pokémon Game Clone',
-        category: 'Game Design & Development',
-        categoryType: 'game',
+        id: 'pokemon',
+        title: 'Pokémon Tkinter',
+        category: 'Python',
+        categoryType: 'python',
+        detailedDescription: 'A mini Pokémon-style RPG with turn-based battles, character interaction, and sprite animations.',
         description: 'Mini RPG with custom characters and interactive features.',
-        image: '/placeholder.svg',
-        technologies: ['Unity', 'C#', 'Sprite Animation', 'Game Design']
+        image: 'public/pkm.png',
+        technologies: ['Unity', 'C#', 'Sprite Animation', 'Game Design'],
+        youtube: 'https://youtu.be/LZNOL9sKkJs',
+        artefact: 'https://github.com/yourusername/pokemon-clone'
       },
       {
         id: 'tourism-website',
         title: 'Tourism Website – Roam Radar',
         category: 'Web Projects',
         categoryType: 'web',
+        detailedDescription: 'A responsive website highlighting UAE tourist destinations with modern scroll-based animations and interactive maps.',
         description: 'Clean UI/UX for showcasing UAE tourist spots.',
-        image: '/placeholder.svg',
-        technologies: ['HTML', 'CSS', 'JavaScript', 'Responsive Design']
-      },
-      {
-        id: 'web-dev-assignments',
-        title: 'Clone Tasks & Web Dev II Assignments',
-        category: 'Web Projects',
-        categoryType: 'web',
-        description: 'Multiple front-end experiments using HTML/CSS/JS.',
-        image: '/placeholder.svg',
-        technologies: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design']
-      },
-      {
-        id: 'twine-story',
-        title: 'Twine Story – Life Play',
-        category: 'Creative Tech & Storytelling',
-        categoryType: 'creative',
-        description: 'A digital narrative experience in interactive storytelling.',
-        image: '/placeholder.svg',
-        technologies: ['Twine', 'Interactive Fiction', 'Narrative Design']
+        image: 'public/tour.jpg',
+        technologies: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
+        youtube: 'https://youtu.be/y68QWwNP200',
+        artefact: 'https://maryam-tahirr.github.io/uae.github.io/'
       },
       {
         id: 'study-cram-app',
         title: 'Study CRAM UX App',
         category: 'Creative Tech & Storytelling',
         categoryType: 'creative',
+        detailedDescription: 'Prototype app with voice-over learning features and UX storyboard flow for study assistance.',
         description: 'Voice-over learning assistant with prototyping and storyboard.',
-        image: '/placeholder.svg',
-        technologies: ['UX Design', 'Voice UI', 'Prototyping', 'Figma']
+        image: 'public/study.png',
+        technologies: ['UX Design', 'Voice UI', 'Prototyping', 'Figma'],
+        youtube: 'https://youtu.be/c_ezg_q4qJY',
+        artefact: 'https://www.figma.com/proto/wZBlXxZOBVovQSv8esOgws/high-fidelity?node-id=0-1&p=f&t=t8Eu9YQyUw4N2Ohh-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=187%3A528'
+      },
+      {
+        id: 'portfolio-website',
+        title: 'Portfolio Website',
+        category: 'Web Projects',
+        categoryType: 'web',
+        detailedDescription: 'Custom-designed developer portfolio featuring tag-based filtering, project previews, and smooth animations.',
+        description: 'My personal portfolio showcasing projects and skills.',
+        image: 'public/portfolio.png',
+        technologies: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
+        youtube: '',
+        artefact: 'https://maryam-tahirr.github.io/'
+      },
+      {
+        id: 'chromatique',
+        title: 'Chromatique Web App',
+        category: 'Creative Tech & Storytelling',
+        categoryType: 'web',
+        detailedDescription: 'Color-based visual storytelling platform with generative hues and memory-based interactivity.',
+        description: 'Experimental color-based storytelling app.',
+        image: 'public/chromatique.png',
+        technologies: ['JavaScript', 'CSS Grid', 'Design Systems'],
+        youtube: 'https://drive.google.com/file/d/192OjAo610Se_biry2RS7ERDc6-W4W97a/view?usp=sharing',
+        artefact: 'chromatique.onrender.com'
+      },
+      {
+        id: 'musclehub',
+        title: 'MuscleHub Web App',
+        category: 'Web Projects',
+        categoryType: 'web',
+        detailedDescription: 'Fitness app with workout plans, animated charts, and user profile management built with responsive layouts.',
+        description: 'Web app for fitness plans and tracking.',
+        image: 'public/musclehub.png',
+        technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS', 'Radix UI', 'Typescript'],
+        youtube: 'https://youtu.be/uslqJz23KFg',
+        artefact: 'musclehub.onrender.com'
+      },
+      {
+        id: 'catch-the-robber',
+        title: 'Catch the Robber (Bitsy Game)',
+        category: 'Game Design & Development',
+        categoryType: 'game',
+        detailedDescription: 'A tiny interactive pixel art game made in Bitsy. Solve clues and chase down the robber in a retro style.',
+        description: 'A puzzle-style microgame in Bitsy.',
+        image: 'public/catch.png',
+        technologies: ['Bitsy', 'Pixel Art', 'Storytelling'],
+        youtube: 'https://youtu.be/g4iivahXA0M',
+        artefact: 'https://maryam-tahir.itch.io/catch-the-robberrr'
+      },
+      {
+        id: 'vending-machine',
+        title: 'Python Vending Machine',
+        category: 'python',
+        categoryType: 'python',
+        detailedDescription: 'A command-line vending machine simulation developed in Python. The program handles user input, displays available items with pricing, calculates change, manages inventory, and mimics real-life vending logic. Built without a GUI to emphasize algorithmic thinking and clean code structure.',
+        description: 'Command-line vending machine simulation built with core Python logic.',
+        image: 'public/vending.png', 
+        technologies: ['Python', 'OOP', 'CLI Application'],
+        youtube: 'https://youtu.be/5X9ulyhH1Co',
+        artefact: 'https://github.com/m-ry-m/Vanding-machine'
       }
+
     ];
-    
-    // Get project ID from URL
+
     const urlParams = new URLSearchParams(window.location.search);
     const projectId = urlParams.get('id');
     
@@ -748,12 +828,33 @@
         </div>
         
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
-          <div class="lg:col-span-2">
+            <div class="lg:col-span-2">
             <h2 class="text-2xl font-medium mb-4">About This Project</h2>
-            <p class="mb-6">
+            <p class="mb-6 text-lg leading-relaxed">
               ${project.detailedDescription || project.description}
             </p>
-          </div>
+            <div class="mb-6">
+              ${project.youtube ? `
+              <a href="${project.youtube}" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-full" style="background-color: #ff450010; color: orangered; text-decoration:none; box-shadow: 0 1px 4px rgba(255,69,0,0.07); transition: background 0.2s;">
+              <i class="fab fa-youtube fa-lg" style="color: #FF0000;"></i>
+              <span>Watch the video walkthrough</span>
+              </a>
+              ` : `
+              <span class="inline-block px-4 py-2 rounded-full bg-neutral-light text-muted-foreground font-medium">No video available for this project.</span>
+              `}
+            </div>
+            <div class="mb-6">
+              ${project.artefact ? `
+              <a href="${project.artefact}" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-full" style="background-color: #e0f2fe; color: #2563eb; text-decoration:none; box-shadow: 0 1px 4px rgba(37,99,235,0.07); transition: background 0.2s;">
+              <i class="fas fa-link fa-lg" style="color: #2563eb;"></i>
+              <span>View Project</span>
+              </a>
+              ` : `
+              <span class="inline-block px-4 py-2 rounded-full bg-neutral-light text-muted-foreground font-medium">No artefact available for this project.</span>
+              `}
+            </div>
+            </div>
+            </div>
           
           <div>
             <h3 class="text-xl font-medium mb-4">Technologies Used</h3>
